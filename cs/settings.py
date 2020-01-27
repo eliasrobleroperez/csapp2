@@ -25,7 +25,7 @@ SECRET_KEY = '_sxt@74!gtqs3n^+4!v%%(kf%l#iz*o*$)n4xzjq##2m_)_@4@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost','3.84.31.231']
 
 
 # Application definition
@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'cs.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'eliasdb',
+        'USER': 'postgres',
+        'PASSWORD': 'elias1234',
+        'HOST': 'elias-instance.cezdeegdqjva.us-east-1.rds.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
